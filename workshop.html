@@ -1,0 +1,119 @@
+{% extends "head.html" %}
+{% block content %}
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<h1></a>Amazon Alexa Workshop Installation Instructions</h1>
+
+  <h3> Install Python </h3>
+
+<p> This workshop will require Python. If you do not have Python set up or do not know how to access it follow this quick tutorial: https://learnpythonthehardway.org/book/ex0.html</p>
+
+<h3> Install pip </h3>
+
+<p>pip is a package management system used to install and manage software packages written in Python. Depending on your version of Python, pip may or may not already be installed. Installation instructions can be found here: https://pip.pypa.io/en/stable/installing/</p>
+
+<h3> Install and activate virtualenv </h3>
+
+  <p> virtualenv is a tool to create isolated Python environments. Since we will be using Python packages in this workshop, it is strongly recommended that you install the packages in virtualenv to avoid messing up with your global Python packages. You can install virtualenv by issuing the following commands in your terminal:  </p>
+
+  <pre>pip install virtualenv </pre>
+
+  <p> Create a new folder for your application: </p>
+
+  <pre>mkdir alexa-workshop </pre>
+  <pre>cd alexa-workshop </pre>
+
+ <p> Create virtualenv in your folder:  </p>
+ <pre> virtualenv venv</pre>
+
+  <p> Activate virtualenv:  </p>
+ <pre> source venv/bin/activate </pre>
+
+ You will know that you are working in virtualenv as the prompt of your shell/terminal will change to show the active environment. It should look similar to this:
+
+ <pre> (venv)$ </pre>
+
+
+<h3> Install packages </h3>
+<p> We will be using the framework Flask-Ask to build our Alexa Skill. Enter the following into your command line to install necessary packages </p>
+
+<pre>pip install flask</pre>
+<pre>pip install flask-ask</pre>
+
+<h3> Exit virtualenv </h3>
+
+  <p> After installing packages, you can exit the virtualenv by typing: </p>
+<pre>deactivate</pre>
+
+<h3> Download ngrok </h3>
+
+<p> ngrok is a software that establishes secure tunnels from a public endpoint to a locally running network service, and will be used for testing the Alexa skill. Download ngrok for your machine and be sure to unzip the file to a location you can remember: https://ngrok.com/download</p>
+
+<h3> Sign up for Amazon Developer </h3>
+
+<p> Finally, create an acconunt with Amazon Developer: https://developer.amazon.com/</p>
+
+  <p>All done! <a href="http://linhchinguyen.com/"> Ada</a> and I hope to see you at the workshop. If you have any questions please place them in the comments section below.</p>
+
+If you would like to keep updated about all beginner friendly, developer oriented information related to building Alexa Skills sign up for our organizations mailing list below! We promise not to spam!</p>
+
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://justinchavez.us14.list-manage.com/subscribe/post?u=4a2731cb6333ae3e776d10fb3&amp;id=cc9d2d494a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Subscribe to our mailing list. We promise not to spam!</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4a2731cb6333ae3e776d10fb3_cc9d2d494a" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://hackprincetonalexa.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96974690-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+{% endblock %}
+                            
